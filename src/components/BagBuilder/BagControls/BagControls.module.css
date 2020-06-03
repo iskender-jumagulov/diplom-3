@@ -1,0 +1,16 @@
+.BagControls {
+  background-color: goldenrod;
+  width: 300px;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+@media (max-width: 650px) {
+  .BagControls {
+    margin-top: 20px;
+  }
+}

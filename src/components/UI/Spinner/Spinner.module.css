@@ -1,0 +1,34 @@
+.Spinner {
+  color: rgba(0, 0, 0, 0.808);
+  font-size: 20px;
+  margin: 100px auto;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation: load4 1.3s infinite linear;
+  animation: load4 1.3s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+.ball-chasing .loader {
+  width: 100px;
+  height: 100px;
+  animation: rotate 2s linear infinite; }
+  .ball-chasing .loader .ball-1, .ball-chasing .loader .ball-2 {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: chasingBallBounce 2s linear infinite; }
+  .ball-chasing .loader .ball-2 {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s; }

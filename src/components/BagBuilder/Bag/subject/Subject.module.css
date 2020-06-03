@@ -1,0 +1,46 @@
+.Subjects {
+  position: relative ;
+  box-sizing: border-box;
+  top:0px;
+  left:0px;
+  background-repeat: no-repeat;
+  transform: translate(-140px, 130px);
+}
+
+.camera {
+  background-image: url(../../../../assets/camera.svg);
+  background-size: cover;
+ 
+}
+
+.flashlight {
+  background-image: url(../../../../assets/light.svg);
+  background-size: cover;
+}
+
+.water {
+  background-image: url(../../../../assets/water.svg);
+  background-size: cover;
+}
+
+.medicinechest {
+  background-image: url(../../../../assets/medicinechest.svg);
+  background-size: cover;
+}
+
+.tent{
+  background-image: url(../../../../assets/tent.svg);
+  background-size: cover;
+}
+
+.flashlight {
+  background-image: url(../../../../assets/flashlight.svg);
+  background-size: cover;
+}
+
+@media (max-width: 600px) {
+  .Subjects {
+    width: 20px;
+    height: 20px;
+  }
+}

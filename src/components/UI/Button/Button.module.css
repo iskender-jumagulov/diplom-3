@@ -1,0 +1,39 @@
+.Button {
+  width: 120px;
+  height: 40px;
+  font-size: 1rem;
+  border: none;
+  margin-right: 10px;
+  background-color: white;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.Button:disabled {
+  opacity: 0.5;
+}
+
+.Button:not(:disabled):hover {
+  opacity: 0.8;
+}
+
+.green {
+  background-color: #1a6e01ea;
+  color: white;
+  border: 1px solid transparent;
+}
+.red {
+  background-color: rgba(117, 11, 11, 0.904);
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .Button {
+    margin-bottom: 40px;
+  }
+}

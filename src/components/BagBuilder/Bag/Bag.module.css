@@ -1,0 +1,52 @@
+.Bag {
+  padding: 0 0.5rem;
+}
+
+.Bag .bento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: wrap;
+  align-items: center;
+  position: relative;
+  background-image: url(../../../assets/bag.jpg);
+  background-size: cover;
+  width: 400px;
+  height: 380px;
+  margin: 0 auto;
+  padding-bottom: 0px;
+  
+}
+
+.Bag .price {
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+  font-family: 'Niconne', cursive;
+  
+}
+
+.Bag .subjectsBento {
+  position: relative;
+  top:0px;
+  left:0px;
+  transform: translate(-130px, -110px);
+
+}
+
+@media (max-width: 880px) {
+  .Bag .bento {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top:60px }
+}
+@media (max-width: 880px){}
+.Bag .subjectsBento {
+  position: relative;
+  top:0px;
+  left:0px;
+  transform: translate(-120px, -120px);
+}
