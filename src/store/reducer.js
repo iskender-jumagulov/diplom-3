@@ -23,7 +23,7 @@ const PRICES = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actions.ADD_FLOWERS:
+    case actions.ADD_SUBJECTS:
       return {
         ...state,
         subjects: {

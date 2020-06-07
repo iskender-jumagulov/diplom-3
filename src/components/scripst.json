@@ -1,0 +1,8 @@
+{
+    "redvalvet": { "quantity":1, "price":35, "labal":"Red Velvet" },
+    "bostoncream": { "quantity":1, "price":40, "labal":"Boston Cream"},
+    "mocha": { "quantity":1, "price":30, "labal":"Mocha"  },
+    "keylime": { "quantity":1, "price":50, "labal":"Key Lime" },
+    "checolatewhite": { "quantity":1,"price":50, "labal":"Checolate White" },
+    "lemondrop": { "quantity":1, "price":20, "labal":"Lemon Drop" }
+}

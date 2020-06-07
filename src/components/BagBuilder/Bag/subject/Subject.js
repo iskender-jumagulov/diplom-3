@@ -35,10 +35,7 @@ export default memo(({ type }) => {
     case "tent":
       subjectsClasses.push(classes.tent);
       break;
-    case "flashlight":
-    default:
-      subjectsClasses.push(classes.flashlight);
-      break;
+    
   }
 
   

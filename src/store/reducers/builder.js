@@ -2,45 +2,32 @@ import * as types from "../actions/types";
 
 const initialState = {
   subjects: null,
-  price: 80,
+  price: 0,
 };
 
 export default (state = initialState, action) => {
+  const newState = { ...state };
+
   switch (action.type) {
     case types.ADD_SUBJECTS:
-      return {
-        ...state,
-        subjects: {
-          ...state.subjects,
-          [action.subject]: {
-            ...state.subjects[action.subject],
-            quantity: state.subjects[action.subject].quantity + 1,
-          },
-        },
-        price: state.price + state.subjects[action.subject].price,
-      };
+      newState.subjects[action.subject].quantity++;
+      newState.price = state.price + state.subjects[action.subject].price;
+
+      return newState;
 
     case types.REMOVE_SUBJECTS:
-      return {
-        ...state,
-        subjects: {
-          ...state.subjects,
-          [action.subject]: {
-            ...state.subjects[action.subject],
-            quantity: state.subjects[action.subject].quantity - 1,
-          },
-        },
-        price: state.price - state.subjects[action.subject].price,
-      };
+      newState.subjects[action.subject].quantity--;
+      newState.price = state.price - state.subjects[action.subject].price;
+
+      return newState;
 
     case types.SET_SUBJECTS:
-      return {
-        ...state,
-        subjects: action.subjects,
-        price: initialState.price,
-      };
+      newState.subjects = action.subjects;
+      newState.price = initialState.price;
+
+      return newState;
 
     default:
-      return state;
+      return newState;
   }
 };

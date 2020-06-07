@@ -10,10 +10,11 @@ import { useDispatch, useSelector } from "react-redux";
 export default withAxios(() => {
   const dispatch = useDispatch();
   const { orders } = useSelector((state) => state.orders);
+  const { token, id } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    load(dispatch);
-  }, [dispatch]);
+    load(dispatch, token, id);
+  }, [dispatch, token, id]);
 
   let ordersOutput = <Spinner />;
   if (orders) {
@@ -22,7 +23,7 @@ export default withAxios(() => {
     ));
   }
   if (orders === null) {
-    ordersOutput = <h3>No orders found...</h3>;
+    ordersOutput = <h3>No orders found</h3>;
   }
 
   return (
