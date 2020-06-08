@@ -35,7 +35,7 @@ export default withAxios(() => {
   let output = <Spinner />;
   if (subjects) {
     const canOrder = Object.values(subjects).reduce((canOrder, subject) => {
-      return !canOrder ? subject.quantity > 0 : canOrder;
+      return !canOrder ? subject.quantity > 1 : canOrder;
     }, false);
 
     output = (
