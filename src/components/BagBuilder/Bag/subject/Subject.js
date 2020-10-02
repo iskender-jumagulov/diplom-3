@@ -19,7 +19,7 @@ export default memo(({ type }) => {
     return distance < pr ? { x: ix - ir, y: iy - ir } : getPosition(ir);
   };
 
-  switch (type) {
+switch (type) {
     case "camera":
       subjectsClasses.push(classes.camera);
       break;
