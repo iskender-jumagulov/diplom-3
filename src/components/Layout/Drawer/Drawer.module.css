@@ -1,13 +1,13 @@
 .Drawer .content {
   width: 330px;
-  background-color: goldenrod;
+  background-color: #fbbd0d;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 200;
   height: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.137);
-  background-color: goldenrod;
+  background-color: #fbbd0d;
   transition: transform 0.2s ease-in;
 }
 
