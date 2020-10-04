@@ -6,7 +6,7 @@ export default ({ subjects , cancelOrder, finishOrder, price }) => {
   const subjectsOutput = Object.keys(subjects)
     .filter((subject) => subjects[subject].quantity > 0)
     .map((subject) => (
-      <li key={subjects}>
+      <li key={subject}>
         {subjects[subject].label}: {subjects[subject].quantity}
       </li>
       ));
