@@ -48,7 +48,7 @@ export default withAxios(() => {
         />
         <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
           <OrderSummary
-            subjects={subject}
+            subjects={subjects}
             finishOrder={() => history.push("/checkout")}
             cancelOrder={() => setIsOrdering(false)}
             price={price}
