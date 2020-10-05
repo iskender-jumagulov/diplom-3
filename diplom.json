@@ -1,0 +1,35 @@
+{
+  "camera" : {
+    "label" : "Camera",
+    "price" : 3000,
+    "quantity" : 1
+  },
+  "flashlight" : {
+    "label" : "Flashlight",
+    "price" : 150,
+    "quantity" : 1
+  },
+  
+  "medicinechest" : {
+    "label" : "Medicinechest",
+    "price" : 250,
+    "quantity" : 1
+  },
+  "tent" : {
+    "label" : "Tent",
+    "price" : 450,
+    "quantity" : 1
+  },
+  "water" : {
+    "label" : "Water",
+    "price" : 50,
+    "quantity" : 1
+  },
+  "matches" : {
+    "label" : "Matches",
+    "price" : 10,
+    "quantity" : 1
+  }
+  
+
+}

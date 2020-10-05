@@ -1,6 +1,5 @@
 .Order {
-  font-family: 'Niconne', cursive;
-  
+  font-family: sans-serif;
   border-bottom: 3px solid rgba(128, 128, 128, 0.37);
   padding: 10px;
   margin: 0 auto;
@@ -17,9 +16,8 @@
 .Order .price {
   font-weight: bold;
   font-size: 1.5rem;
-  color:#fbbd0d ;
-  font-family: 'Niconne', cursive;
-  
+  color: #c43a3a;
+  font-family: "Nanum Brush Script", cursive;
   margin-bottom: 0.3em;
 }
 

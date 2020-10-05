@@ -58,10 +58,6 @@ export default withAxios(() => {
     );
   }
 
-  return (
-    <div className={classes.BagBuilder}>
-      <h1>Bag builder</h1>
-      {output}
-    </div>
-  );
+ 
+return <div className={classes.BagBuilder}>{output}</div>;
 }, axios);

@@ -9,13 +9,13 @@
 .DrawerToggle > div {
   height: 3px;
   width: 30px;
-  background-color: goldenrod;
+  background-color: black;
 }
 .DrawerToggle > div:not(:last-child) {
   margin-bottom: 5px;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 740px) {
   .DrawerToggle {
     display: none;
   }

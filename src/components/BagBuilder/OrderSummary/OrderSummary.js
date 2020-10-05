@@ -2,19 +2,19 @@ import React from "react";
 import classes from "./OrderSummary.module.css";
 import Button from "../../UI/Button/Button";
 
-export default ({ subjects , cancelOrder, finishOrder, price }) => {
+export default ({ subjects, cancelOrder, finishOrder, price }) => {
   const subjectsOutput = Object.keys(subjects)
     .filter((subject) => subjects[subject].quantity > 0)
     .map((subject) => (
       <li key={subject}>
         {subjects[subject].label}: {subjects[subject].quantity}
       </li>
-      ));
+    ));
 
   return (
     <div className={classes.OrderSummary}>
       <h2>Congratulations! </h2>
-      <p>Here is the composition of your bag</p>
+      <p>Here is the composition of your bouquet:</p>
       <ul>{subjectsOutput}</ul>
       <p>Total price: {price} som.</p>
       <p>Would you like to checkout? </p>

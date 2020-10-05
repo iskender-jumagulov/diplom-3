@@ -3,16 +3,15 @@ import { useHistory, Route, Redirect } from "react-router-dom";
 import axios from "../../axios";
 import CheckoutSummary from "./CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
-import CheckoutForm from "../../components/Checkout/CheckoutForm/CheckoutForm";
+import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withAxios from "../../hoc/withAxios/withAxios";
 import Spinner from "../UI/Spinner/Spinner";
 import { useSelector } from "react-redux";
 
 export default withAxios(({ loading }) => {
   const history = useHistory();
-  const { subjects, price } = useSelector(state => state.builder);
-  const { token, id } = useSelector(state => state.auth);
-
+  const { subjects, price } = useSelector((state) => state.builder);
+  const { token, id } = useSelector((state) => state.auth);
 
   function checkoutCancel() {
     history.push("/builder");
@@ -24,12 +23,12 @@ export default withAxios(({ loading }) => {
 
   function checkoutFinish(data) {
     axios
-     .post("/orders.json?auth=" + token, {
+      .post("/orders.json?auth=" + token, {
         subjects,
         price,
         details: data,
-        userId: id
-    })
+        userId: id,
+      })
       .then(() => history.replace("/"));
   }
 
@@ -38,22 +37,22 @@ export default withAxios(({ loading }) => {
     formOutput = <CheckoutForm checkoutFinish={checkoutFinish} />;
   }
 
-  let summaryOutput = <Redirect to="/" />
+  let summaryOutput = <Redirect to="/" />;
   if (subjects) {
     summaryOutput = (
       <CheckoutSummary
-        subjects={subjects}
+      subjects={subjects}
         price={price}
         checkoutCancel={checkoutCancel}
         checkoutContinue={checkoutContinue}
       />
     );
-    }
-    return (
-      <div className={classes.Checkout}>
-        {summaryOutput}
-        <Route path="/checkout/form">{formOutput}</Route>
-      </div>
-    );
-  }, axios);
-  
+  }
+
+  return (
+    <div className={classes.Checkout}>
+      {summaryOutput}
+      <Route path="/checkout/form">{formOutput}</Route>
+    </div>
+  );
+}, axios);

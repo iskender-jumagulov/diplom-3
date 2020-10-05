@@ -13,14 +13,3 @@
   opacity: 0;
   transform: translateY(-100vh);
 }
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (min-width: 400px) {
-  .Modal {
-    width: 500px;
-  }
-}

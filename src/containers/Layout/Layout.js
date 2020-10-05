@@ -16,7 +16,7 @@ export default ({ children }) => {
       <Toolbar toggleDrawer={toggleDrawer} />
       <Drawer open={drawerOpen} toggleDrawer={toggleDrawer} />
       <main>{children}</main>
-     
+      
     </div>
   );
 };

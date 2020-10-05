@@ -35,10 +35,13 @@ switch (type) {
     case "tent":
       subjectsClasses.push(classes.tent);
       break;
-    
+      case "matches":
+      default:
+      subjectsClasses.push(classes.matches);
+      break;
   }
 
-  
+
 
   const position = getPosition(50 / 2);
 

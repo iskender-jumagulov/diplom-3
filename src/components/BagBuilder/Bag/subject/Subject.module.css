@@ -1,4 +1,4 @@
-.Subjects {
+.Subject {
   position: relative ;
   box-sizing: border-box;
   top:0px;
@@ -37,6 +37,11 @@
   background-image: url(../../../../assets/flashlight.svg);
   background-size: cover;
 }
+.matches{
+  background-image: url(../../../../assets/matches.svg);
+  background-size: cover;
+}
+
 
 @media (max-width: 600px) {
   .Subjects {
